@@ -61,10 +61,29 @@ public class ArtPanel extends JPanel
 		
 	}
 	
+	public void loadImage()
+	{
+		
+	}
+	
 	public void setupPanel()
+	{
+		this.setPreferredSize(new Dimension(700, 700));
+		this.setBackground(Color.PINK);
+		this.currentColor = Color.BLACK;
+	}
+
+	public void setCurrentColor(String color)
 	{
 		
 	}
 
-//Nice
+	@Override
+	protected void paintComponent(Graphics graphics)
+	{
+		super.paintComponent(graphics);
+		graphics.drawImage(currentCanvas, 0, 0, null);
+	}
+	
+
 }
